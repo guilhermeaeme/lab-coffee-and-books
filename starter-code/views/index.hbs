@@ -5,9 +5,9 @@
     <ul>
         {{#each places}}
         <li>
-            <a href="/places/{{ this._id}}">{{ this.name}}</a>
+            <a href="/places/{{ this._id}}">{{ this.name}} (<em>{{this.type}}</em>)</a>
             |
-            <a href="/places/{{ this._id}}/delete">Delete</a>
+            <a href="/places/{{ this._id}}/delete" class="btn">Delete</a>
         </li>
         {{/each }}
     </ul>

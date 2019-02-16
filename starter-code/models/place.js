@@ -6,6 +6,9 @@ const placeSchema = new Schema({
   type: { type: String, enum: ['cooffe shop', 'bookstore'] },
   address: String,
   location: { type: { type: String }, coordinates: [Number] }
+},
+{
+  timestamps: true
 });
 
 placeSchema.index({ location: '2dsphere' });
