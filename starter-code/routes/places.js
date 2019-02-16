@@ -53,14 +53,14 @@ router.post('/:place_id', (req, res, next) => {
 			};
 
 			place.name        = req.body.name;
-			place.description = req.body.description;
+			place.type 				= req.body.type;
 			place.address  	 = req.body.address;
 			place.location    = location;
 			place.save(error => {
 				if (error) { 
 					next(error); 
 				} else { 
-					res.redirect(`/${req.params.place_id}`); 
+					res.redirect(`/places/${req.params.place_id}`); 
 				}
 			});
 		}
