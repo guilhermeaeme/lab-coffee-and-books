@@ -37,7 +37,11 @@ app.use(require('node-sass-middleware')({
   dest: path.join(__dirname, 'public'),
   sourceMap: true
 }));
-      
+
+hbs.registerHelper('selected', function(value, test) {
+  if (value == undefined) return '';
+  return value==test ? 'selected' : '';
+});
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
