@@ -1,0 +1,12 @@
+<h3 id="placeName">{{ place.name}}</h3>
+<p>{{ place.description}}</p>
+<p>{{ place.address}}</p>
+
+<div id="map"></div>
+
+<a href="/">Go back to the list</a> | 
+<a href="/places/{{place._id}}/edit">Edit this place</a>
+
+<script>
+let _ID = '{{ place._id }}';
+</script>

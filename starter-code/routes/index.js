@@ -1,9 +1,16 @@
 const express = require('express');
 const router  = express.Router();
+const Place = require('../models/place');
 
-/* GET home page */
+// GET => to retrieve all the places from the DB
 router.get('/', (req, res, next) => {
-  res.render('index');
+	Place.find({},(error, placesFromDB) => {
+		if (error) { 
+			next(error); 
+		} else { 
+			res.render('index', { places: placesFromDB });
+		}
+	});
 });
 
 module.exports = router;

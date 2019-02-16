@@ -1,0 +1,20 @@
+<h3>Add new place</h3>
+<form method="POST" action="/places/new">
+    <input type="text" name="name" placeholder="name">
+
+    <label>Type</label>
+    <select name="type">
+        <option value="cooffe shop">cooffe shop</option>
+        <option value="bookstore">bookstore</option>
+    </select>
+
+    <label>Address</label>
+    <input type="hidden" id="latitude" name="latitude" placeholder="latitude" >
+    <input type="hidden" id="longitude" name="longitude" placeholder="longitude">
+
+    <input type="text" id="address" name="address" placeholder="address">
+    <input id="getLatLng" type="button" value="get lat lng">
+
+    <input type="submit" name="" id="submit">
+</form>
+<a href="/">Back to the list</a>
